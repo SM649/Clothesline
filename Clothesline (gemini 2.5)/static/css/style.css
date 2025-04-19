@@ -1,0 +1,221 @@
+/* static/css/style.css */
+
+/* --- Color Scheme --- */
+/* Using warm, inviting tones */
+:root {
+    --primary-color: #ff6347; /* Tomato - A warm, vibrant red */
+    --secondary-color: #ffdab9; /* Peach Puff - A soft, warm beige */
+    --accent-color: #ffa07a; /* Light Salmon - A lighter, friendly orange */
+    --text-color: #464646; /* Dark grey for readability */
+    --background-color: #fffaf0; /* Floral White - A very light, warm white */
+    --card-background: #ffffff; /* White for cards/containers */
+    --footer-background: #ffdab9; /* Peach Puff for footer */
+    --caption-background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background for captions (slightly darker) */
+    --image-overlay-color: rgba(0, 0, 0, 0.4); /* More prominent semi-transparent dark overlay for images */
+    --typing-text-color: #ffffff; /* Color for the typing text (should contrast with overlay) */
+
+    /* Navbar Font Sizes */
+    --navbar-brand-font-size: 1.8rem; /* Increased size for brand name */
+    --navbar-link-font-size: 1.2rem; /* Increased size for nav links */
+}
+
+/* --- Custom Font Import --- */
+/* You will need to ensure the 'Saint Carell' font is loaded. */
+/* Example using @font-face if you have the font files in static/fonts: */
+/*
+@font-face {
+    font-family: 'Saint Carell';
+    src: url('{{ url_for('static', filename='fonts/SaintCarell.woff2') }}') format('woff2'),
+         url('{{ url_for('static', filename='fonts/SaintCarell.woff') }}') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+/* Or link from a web font service in base.html */
+
+
+body {
+    font-family: 'Arial', sans-serif; /* Or choose a more stylish font */
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    margin: 0; /* Remove default body margin */
+    /* Adjust padding-top dynamically or manually if navbar height changes */
+     padding-top: 75px; /* Estimate new navbar height with larger logo/text - adjust if needed */
+}
+h1{
+    color: var(--accent-color);
+}
+h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+    background-color: var(--secondary-color); /* Warm color for the navbar */
+    padding-top: 0.75rem; /* Increase top padding */
+    padding-bottom: 0.75rem; /* Increase bottom padding */
+    /* The increased height will also be affected by the larger logo/text */
+}
+
+/* Style for the logo image in the navbar */
+.navbar-brand .navbar-logo {
+    height: 50px; /* Increased height of the logo - adjust as needed */
+    /* Bootstrap's me-2 class handles the right margin */
+}
+
+/* Styling for the brand name text */
+.navbar-brand .brand-text {
+    font-family: 'Saint Carell', cursive, sans-serif; /* Apply the custom font */
+    font-style: normal; /* Remove italic as the font itself might be script/italic */
+    font-size: var(--navbar-brand-font-size); /* Use variable for size */
+    font-weight: normal; /* Custom fonts might not have bold variants, use normal */
+    color: var(--text-color); /* Ensure it uses the text color */
+}
+
+/* Styling for other navigation links */
+.nav-link {
+    color: var(--text-color) !important; /* Ensure text color contrast */
+    font-size: var(--navbar-link-font-size); /* Use variable for size */
+    margin-left: 15px; /* Add space between links */
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.card {
+    background-color: var(--card-background);
+    border: none; /* Optional: remove card border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Animation for hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+}
+
+/* --- Subtle Animations --- */
+
+/* Fade-in effect for elements as they load (can be applied to sections or cards) */
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Simple slide-in effect (can be applied to specific components) */
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* --- Home Page Hero Section Styling --- */
+.hero-section {
+    position: relative; /* Allows absolute positioning of children */
+    width: 100%;
+    height: 60vh; /* Set a height based on viewport height, or a fixed px value */
+    overflow: hidden; /* Hide parts of the image that exceed container */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Vertically center flex items */
+    justify-content: center; /* Horizontally center flex items */
+    color: #ffffff; /* Default text color for hero text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for readability */
+    margin-bottom: 40px; /* Add space below the hero section */
+}
+
+.hero-section .carousel {
+    position: absolute; /* Position behind the text */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Make carousel fill the hero section */
+    z-index: 1; /* Place below the text */
+}
+
+.hero-section .carousel-inner,
+.hero-section .carousel-item,
+.hero-section .carousel-inner img {
+    width: 100%;
+    height: 100%; /* Make image fill the carousel item/inner */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+/* Image Overlay (applied via ::before on carousel-item) */
+.carousel-item::before {
+     content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--image-overlay-color); /* Use the increased darkness */
+    z-index: 1; /* Ensure overlay is above the image but below the caption/hero text */
+}
+
+
+.hero-text {
+    position: relative; /* Position above the carousel */
+    z-index: 2; /* Ensure text is above the carousel and overlay */
+    text-align: center;
+    padding: 0 20px; /* Add some horizontal padding */
+}
+
+.hero-text h1 {
+    color: var(--secondary-color); /* Ensure heading is white */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* More prominent shadow for heading */
+}
+
+.hero-text .lead {
+     color: var(--typing-text-color); /* Use defined color for typing text */
+     /* JavaScript will handle the typing effect here */
+     min-height: 1.5em; /* Prevent layout shifts while typing - adjust based on text wrapping */
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: var(--footer-background);
+    color: var(--text-color);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* --- Utility Classes (Optional but helpful) --- */
+/* Adjust section-padding for content below the hero section */
+.section-padding {
+    padding: 60px 0; /* Add vertical padding to sections */
+}
+
+.text-primary-color { color: var(--primary-color); }
+.bg-secondary-color { background-color: var(--secondary-color); }

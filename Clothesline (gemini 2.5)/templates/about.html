@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<div class="container section-padding fade-in">
+    <h1 class="text-center mb-4">About Clothesline</h1>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6 slide-in">
+            <img src="{{ url_for('static', filename='images/about.png') }}" alt="About Us Image" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 slide-in">
+            <p class="lead">Clothesline started with a passion for fashion and a vision to create a brand that offers stylish, comfortable, and accessible clothing for everyone.</p>
+            <p>Founded in 2001, we have grown from a small online store to a thriving community of fashion enthusiasts. Our mission is simple: to provide high-quality apparel that makes you feel confident and look great, no matter the occasion.</p>
+            <p>We are committed to ethical sourcing and sustainable practices, ensuring that our impact on the planet is as positive as our impact on your wardrobe. Every piece in our collection is designed with care, focusing on details, fit, and the latest trends.</p>
+        </div>
+    </div>
+
+    <div class="row mt-5 text-center">
+        <div class="col-md-12">
+            <h2>Our Values</h2>
+        </div>
+        <div class="col-md-4 slide-in">
+            <i class="fas fa-heart fa-3x mb-3 text-primary-color"></i>
+            <h3>Quality</h3>
+            <p>We believe in creating durable and well-made clothing.</p>
+        </div>
+        <div class="col-md-4 slide-in" style="animation-delay: 0.2s;">
+             <i class="fas fa-leaf fa-3x mb-3 text-primary-color"></i>
+            <h3>Sustainability</h3>
+            <p>Committed to eco-friendly practices.</p>
+        </div>
+        <div class="col-md-4 slide-in" style="animation-delay: 0.4s;">
+            <i class="fas fa-smile fa-3x mb-3 text-primary-color"></i>
+            <h3>Customer Satisfaction</h3>
+            <p>Your happiness is our priority.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

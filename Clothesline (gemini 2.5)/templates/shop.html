@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block title %}Shop{% endblock %}
+
+{% block content %}
+<div class="container section-padding">
+    <h1 class="text-center mb-5 fade-in">Our Collection</h1>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col slide-in">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='images/product1.png') }}" class="card-img-top" alt="Product 1">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Summer Breeze Dress</h5>
+                    <p class="card-text text-primary-color fw-bold">$45.00</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col slide-in" style="animation-delay: 0.1s;">
+            <div class="card h-100">
+                 <img src="{{ url_for('static', filename='images/product2.png') }}" class="card-img-top" alt="Product 2">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Urban Explorer Jacket</h5>
+                    <p class="card-text text-primary-color fw-bold">$85.00</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col slide-in" style="animation-delay: 0.2s;">
+            <div class="card h-100">
+                 <img src="{{ url_for('static', filename='images/product3.png') }}" class="card-img-top" alt="Product 3">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Classic Cotton Tee</h5>
+                    <p class="card-text text-primary-color fw-bold">$20.00</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col slide-in" style="animation-delay: 0.3s;">
+            <div class="card h-100">
+                 <img src="{{ url_for('static', filename='images/product4.png') }}" class="card-img-top" alt="Product 4">
+                <div class="card-body text-center">
+                    <h5 class="card-title">High-Waist Jeans</h5>
+                    <p class="card-text text-primary-color fw-bold">$60.00</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="col slide-in" style="animation-delay: 0.4s;">
+            <div class="card h-100">
+                 <img src="{{ url_for('static', filename='images/product5.png') }}" class="card-img-top" alt="Product 5">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Comfy Knit Sweater</h5>
+                    <p class="card-text text-primary-color fw-bold">$55.00</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="col slide-in" style="animation-delay: 0.5s;">
+            <div class="card h-100">
+                 <img src="{{ url_for('static', filename='images/product6.png') }}" class="card-img-top" alt="Product 6">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Elegant Maxi Skirt</h5>
+                    <p class="card-text text-primary-color fw-bold">$50.00</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="col slide-in" style="animation-delay: 0.6s;">
+            <div class="card h-100">
+                 <img src="{{ url_for('static', filename='images/product7.png') }}" class="card-img-top" alt="Product 7">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Athleisure Hoodie</h5>
+                    <p class="card-text text-primary-color fw-bold">$40.00</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="col slide-in" style="animation-delay: 0.7s;">
+            <div class="card h-100">
+                 <img src="{{ url_for('static', filename='images/product8.png') }}" class="card-img-top" alt="Product 8">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Patterned Blouse</h5>
+                    <p class="card-text text-primary-color fw-bold">$35.00</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="col slide-in" style="animation-delay: 0.8s;">
+            <div class="card h-100">
+                 <img src="{{ url_for('static', filename='images/product9.png') }}" class="card-img-top" alt="Product 9">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Slim Fit Trousers</h5>
+                    <p class="card-text text-primary-color fw-bold">$65.00</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="col slide-in" style="animation-delay: 0.9s;">
+            <div class="card h-100">
+                 <img src="{{ url_for('static', filename='images/product10.png') }}" class="card-img-top" alt="Product 10">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Denim Jacket</h5>
+                    <p class="card-text text-primary-color fw-bold">$70.00</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="col slide-in" style="animation-delay: 1.0s;">
+            <div class="card h-100">
+                 <img src="{{ url_for('static', filename='images/product11.png') }}" class="card-img-top" alt="Product 11">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Pleated Midi Skirt</h5>
+                    <p class="card-text text-primary-color fw-bold">$48.00</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="col slide-in" style="animation-delay: 1.1s;">
+            <div class="card h-100">
+                 <img src="{{ url_for('static', filename='images/product12.png') }}" class="card-img-top" alt="Product 12">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Casual Linen Shirt</h5>
+                    <p class="card-text text-primary-color fw-bold">$38.00</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+</div>
+{% endblock %}

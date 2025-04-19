@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<div class="container section-padding fade-in">
+    <h1 class="text-center mb-4">Get in Touch</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 slide-in">
+            <p class="lead text-center mb-5">Have questions? We'd love to hear from you. Fill out the form below or reach out using the contact details provided.</p>
+
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                </div>
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                </div>
+                 <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <div class="text-center">
+                     <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                </div>
+            </form>
+
+            <div class="text-center mt-5">
+                <h3>Contact Details</h3>
+                <p><i class="fas fa-map-marker-alt text-primary-color me-2"></i> 123 Fashion Ave, Style City, ST 12345</p>
+                <p><i class="fas fa-phone text-primary-color me-2"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope text-primary-color me-2"></i> info@clothesline.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
